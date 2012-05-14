@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'commander/import'
+
+# Program Information
+program :name, "txmp"
+program :version, "0.0.1"
+program :description, "Manages and installs bundles for TextMate"
+
+require 'pathname'
+require 'fileutils'
+require 'open-uri'
+# PATHS
+HOME = Dir.home
+TXMP_PATH = File.expand_path(__FILE__)
+TXMP_LIBRARY_PATH = Pathname.new(__FILE__).realpath.dirname.parent.join("Library/txmp").to_s
+TXMP_SUPPORT_PATH = Pathname.new(__FILE__).realpath.dirname.parent.join(HOME << "/Library/Application Support/Textmate").to_s
+$:.unshift(TXMP_LIBRARY_PATH)
+$:.unshift(TXMP_SUPPORT_PATH)
+require 'global'
+
+require 'cmd/list'
