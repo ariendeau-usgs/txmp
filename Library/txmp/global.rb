@@ -21,10 +21,27 @@ def go_bundles
   FileUtils.cd(TXMP_SUPPORT_PATH + "/bundles")
 end
 
-#
-# Change Directory to Textmate packages
-#
-def go_packages
-  FileUtils.cd(TXMP_LIBRARY_PATH + "/Packages")
+def check_package(item)
+  package = "Packages/"+ item +".rb"
+  result = File.exists?(package)
+  if result == true
+    require package
+  else
+    puts "the monkeys can't find your package"
+    exit
+  end
 end
-
+def check_install(item)
+  check_package(item)
+  if @catagory == 'Theme'
+    item_location = '/Themes'
+  elsif @catagory == 'Bundle'
+    item_location = '/Bundles'
+  end
+  FileUtils.cd(TXMP_SUPPORT_PATH + item_location)
+  result = File.exists?(@filename)
+  if result == true
+    puts "The monkeys found that this package is currently installed"
+    exit
+  end
+end
