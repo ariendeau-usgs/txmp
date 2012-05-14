@@ -8,27 +8,27 @@ command :list do |c|
   c.option '--themes', 'shows only the themes'
   c.action do |args, options|
     if options.bundles
-      FileUtils.cd(TXMP_SUPPORT_PATH + "/bundles")
+      go_bundles()
       @bundles = Dir.glob("*.tmbundle")
       @bundles.each do |bundle|
         puts bundle
       end
     elsif options.themes
-      FileUtils.cd(TXMP_SUPPORT_PATH + "/themes")
+      go_themes()
       @themes = Dir.glob("*.tmTheme")
       @themes.each do |theme|
         puts theme
       end
     else
       puts "** BUNDLES **"
-      FileUtils.cd(TXMP_SUPPORT_PATH + "/bundles")
+      go_bundles()
       @bundles = Dir.glob("*.tmbundle")
       @bundles.each do |bundle|
         puts bundle
       end
       puts " "
-      puts "** THEME **"
-      FileUtils.cd(TXMP_SUPPORT_PATH + "/themes")
+      puts "** THEMES **"
+      go_themes()
       @themes = Dir.glob("*.tmTheme")
       @themes.each do |theme|
         puts theme
