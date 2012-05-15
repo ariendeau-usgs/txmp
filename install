@@ -4,6 +4,8 @@
 #
 
 # Defaults to /usr/local
+gem install bundler
+bundle install
 prefix="/usr/local"
 
 if [ ! -d "$prefix" ]; then
