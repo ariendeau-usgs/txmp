@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#	Runs install of the txmp package
+#
+
+# Defaults to /usr/local
+prefix="/usr/local"
+
+if [ ! -d "$prefix" ]; then
+    # Control will enter here if $DIRECTORY doesn't exist
+	mkdir "/usr/local"
+	mkdir "/usr/local/bin"
+	mkdir "/usr/local/Library"
+fi
+
+#copy the boiler to /usr/local/bin
+cp -r bin/txmp $prefix/bin/txmp
+
+#copy the Library to /usr/local 
+cp -r Library/txmp $prefix/Library/txmp
+
+echo "Now type txmp help"
