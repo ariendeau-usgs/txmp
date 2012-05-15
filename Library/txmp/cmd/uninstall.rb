@@ -11,7 +11,7 @@ command :'uninstall' do |c|
     FileUtils.cd(TXMP_SUPPORT_PATH + item_location)
     result = File.exists?(@filename)
     if result == true
-      FileUtils.rm(@filename)
+      FileUtils.rm_r(@filename)
       puts "The monkeys have uninstalled " + args.first
     else
       puts "The monkeys can't find this package! It must not be installed!"

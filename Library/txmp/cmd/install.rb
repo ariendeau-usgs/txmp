@@ -9,7 +9,7 @@ command :'install' do |c|
       puts "The monkeys have installed " + args.first   
     elsif @catagory == 'Bundle'
       FileUtils.cd(TXMP_SUPPORT_PATH + '/Bundles')
-      system("git clone #{@url}")
+      system("git clone #{@url} #{args.first}.tmbundle")
       puts "The monkeys have installed " + args.first  
     end
   end

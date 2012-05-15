@@ -4,7 +4,7 @@
 #
 
 # Defaults to /usr/local
-gem install bundler
+sudo gem install bundler
 bundle install
 prefix="/usr/local"
 
@@ -19,6 +19,8 @@ fi
 cp -r bin/txmp $prefix/bin/txmp
 
 #copy the Library to /usr/local 
-cp -r Library/txmp $prefix/Library/txmp
+cp -r Library/txmp $prefix/Library/
+
+chown $USER $prefix/Library/txmp $prefix/Library/txmp/* $prefix/bin/txmp
 
 echo "Now type txmp help"

@@ -23,7 +23,7 @@ To contribute to the txmp package repo and features. Just fork and submit a pull
 ```
 ``` git clone git@github.com:avintagephoto/txmp.git
 ``` cd txmp
-``` sudo ./install
+``` ./install
 ```
 > Make sure that '/usr/local/bin' is in your path!
 

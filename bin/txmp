@@ -7,7 +7,7 @@ program :name, "txmp"
 program :version, "0.0.1"
 program :description, "Manages and installs bundles for TextMate"
 
-require '../Library/txmp/help_formatters/txmp_help'
+require '/usr/local/Library/txmp/help_formatters/txmp_help'
 program :help_formatter, Commander::HelpFormatter::TxmpHelp
 require 'pathname'
 require 'fileutils'
