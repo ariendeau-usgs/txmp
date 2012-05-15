@@ -20,10 +20,9 @@ To contribute to the txmp package repo and features. Just fork and submit a pull
 ###Installation
 
 ```shell
-```
-``` git clone git@github.com:avintagephoto/txmp.git
-``` cd txmp
-``` ./install
+git clone git@github.com:avintagephoto/txmp.git
+cd txmp
+./install
 ```
 > Make sure that '/usr/local/bin' is in your path!
 
@@ -35,34 +34,38 @@ Now try "txmp help"!
 
 To install a bundle or a theme is easy!
 >```shell
->``` txmp install <package>
-	
+> txmp install <package>
+>```	
+
 To uninstall, its the same.
 >```shell
->``` txmp uninstall <package>
+>txmp uninstall <package>
+>```
 
 To show what you have installed:
 >```shell
->``` txmp list
-
+>txmp list
+>```
 ---------------------------------------------------------------------
 
 ###Package not listed?
 
 Did we forget to add a package you want?
 >```shell
->``` txmp create <package>
+>txmp create <package>
+>```
 
 Did you save and mess up? UH-OH! 
 
 Don't worry, got you covered:
 >```shell
->``` txmp edit <package>
+>txmp edit <package>
+>```
 
 Decided the package was useless?
 >```shell
->``` txmp remove <package>
-
+>txmp remove <package>
+>```
 -------------------------------------------------------------------
 
 
