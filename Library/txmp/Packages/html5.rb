@@ -1,0 +1,5 @@
+@name = "html5"
+@catagory = "Bundle"
+@description = "html5 bundle for textmate"
+@filename = "html5.tmbundle"
+@url = "https://github.com/johnmuhl/html5.tmbundle.git"

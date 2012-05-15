@@ -1,0 +1,17 @@
+  <%= program :name %>
+
+  <%= program :description %>
+
+  Commands:
+<% for name, command in @commands.sort -%>
+<% unless alias? name -%>
+    <%= "%-20s %s" % [command.name, command.summary || command.description] %>
+<% end -%>
+<% end -%>
+<% if program :help -%>
+  <% for title, body in program(:help) %>
+  <%= title %>:
+    <%= body %>
+  <% end %>
+<% end -%>
+

@@ -1,4 +1,4 @@
-command :uninstall do |c|
+command :'uninstall' do |c|
   c.syntax = 'txmp uninstall <package>'
   c.description = 'Removes packages that are currently installed'
   c.action do |args, options|

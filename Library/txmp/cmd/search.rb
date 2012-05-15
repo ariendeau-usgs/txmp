@@ -1,4 +1,4 @@
-command :search do |c|
+command :'search' do |c|
   c.syntax = 'txmp search <package>'
   c.description = 'Searches through the current avalible packages'
   c.action do |args, options|

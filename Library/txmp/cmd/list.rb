@@ -1,7 +1,7 @@
 #
 # Lists all the currently installed bundles
 #
-command :list do |c|
+command :'list' do |c|
   c.syntax = 'txmp list [options]'
   c.description = 'Lists currently installed bundles and themes'
   c.option '--bundles', 'shows only the bundles'

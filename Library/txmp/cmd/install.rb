@@ -8,7 +8,9 @@ command :'install' do |c|
       download(@url, @filename)
       puts "The monkeys have installed " + args.first   
     elsif @catagory == 'Bundle'
-      
+      FileUtils.cd(TXMP_SUPPORT_PATH + '/Bundles')
+      system("git clone #{@url}")
+      puts "The monkeys have installed " + args.first  
     end
   end
 end
