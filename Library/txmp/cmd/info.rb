@@ -4,6 +4,7 @@ command :'info' do |c|
   c.action do |args, options|
     check_package(args.first)
     puts "Name: " + @name
+    puts "Author: " + @author
     puts "Type: " + @catagory
     puts "Description: " + @description
     puts "URL: " + @url
